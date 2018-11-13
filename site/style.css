@@ -1,0 +1,183 @@
+:root {
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    --pink: #ff408e;
+    --grey-pink: #bb2763;
+    --white-pink: #ff408e80;
+    --white-grey: #f0f0f0;
+    --grey: #b4b4b4;
+    --dark-grey: #666666;
+    --small-font: 0.8em;
+}
+#root {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.btn {
+    border-radius: 0 !important;
+    min-width: 125px !important;
+}
+.btn.custom-btn {
+    border: 1px solid var(--white-grey)
+}
+.btn.custom-btn:hover {
+    border: 1px solid var(--pink);
+    background-color: white;
+}
+.btn.shipping-btn {
+    background-color: var(--pink);
+    color: white;
+}
+.btn.shipping-btn:hover {
+    background-color: var(--grey-pink);
+    color: white;
+}
+nav {
+    overflow: hidden;
+    padding: 0 20px;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+header + div {
+    padding: 20px 0;
+}
+h3 {
+    text-transform: uppercase;
+}
+.show-more {
+    color: var(--pink);
+    text-decoration: none;
+    margin-left: 5px;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+}
+.full-width-field {
+    min-width: 85%;
+}
+.text-info {
+    display: none;
+}
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    margin: -10px;
+}
+    .form-fields .label-field {
+        transform: translate(11px, 11px) scale(1);
+    }
+    .form-fields .form-control-root {
+        margin: 10px;
+        min-width: 140px;
+    }
+    .form-fields .label-field-focused {
+        color: var(--grey) !important;
+    }
+        .form-fields .form-control-root > p {
+            position: absolute;
+            bottom: -15px;
+            left: -10px;
+            font-size: 0.7em
+        }
+
+        .form-fields .input-props fieldset{
+            border-color: var(--grey);
+            border-radius: 0;
+        }
+        .form-fields .input-props input {
+            background-color: var(--white-grey);
+        }
+        .form-fields .input-props:hover:not(.input-props__focused):not(.input-props__disabled):not(.input-props__error) fieldset {
+            border-color: var(--white-pink) !important;
+        }
+        .form-fields .input-props__focused fieldset{
+            border-color: var(--white-pink) !important;
+            border-width: 1px !important;
+        }
+        .form-fields .input-props__focused input {
+            background-color: white;
+        }
+    .form-fields .input-props__input{
+        padding: 10px;
+    }
+    .form-fields .label-field__focused {
+        color: var(--grey) !important;
+    }
+
+        .form-fields .form-control__selector fieldset{
+            border-color: var(--grey);
+            border-radius: 0;
+            background-color: var(--white-grey);
+        }
+    .form-fields .form-button {
+        margin: 10px;
+    }
+    .form-fields .form-button__back {
+        order: 1;
+        padding: 10px;
+        text-decoration: underline;
+        color: var(--dark-grey);
+        margin-top: 0;
+    }
+    .form-fields .form-button__buy {
+        order: 0
+    }
+.bottom-form {
+    margin-top: 20px;
+}
+
+@media (min-width: 540px) {
+    .bottom-form {
+        flex-direction: row !important;
+    }
+    .form-fields .form-button__back {
+        order: 0;
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    .form-fields .form-button__buy {
+        order: 1;
+        min-width: 160px !important;
+    }
+    .form-button__buy:after {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        content: '\2192' !important;
+        margin-top: -7px;
+    }
+    .form-button__buy > span:first-child {
+        margin-left: -13px;
+    }
+}
+@media (min-width: 720px) {
+    .row {
+        flex-direction: row;
+        width: 100%;
+    }
+    .form-control-root {
+        flex: 1;
+    }
+    .big-field {
+        flex: 2
+    }
+    .text-info {
+        display: block;
+        flex: 1;
+        margin: 10px;
+        padding: 10px 0px;
+    }
+    .form-fields {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

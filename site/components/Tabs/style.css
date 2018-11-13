@@ -1,0 +1,31 @@
+.tabs__text {
+    margin-top: 16px;
+}
+.tabs__tabs > button {
+    border: 1px solid var(--grey);
+    border-bottom: 0 none;
+    flex: 1 1 auto;
+}
+.tabs__tabs > button {
+    margin-right: 6px;
+}
+.tabs__tabs > button:last-child {
+    margin-right: 0;
+}
+.tabs__tabs > button[aria-selected="true"] {
+    border-color: var(--dark-grey);
+    min-height: 36px;
+}
+.tabs__tabs {
+    border-bottom: 1px solid var(--dark-grey);
+}
+.tabs .tabs__root {
+    min-height: 36px;
+}
+.tabs__tabs + span {
+    background-color: white;
+    transform: scaleX(0.99);
+}
+.tabs__root > .tabs__tabs {
+    border-bottom: 0 none;
+}

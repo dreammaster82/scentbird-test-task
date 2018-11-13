@@ -1,0 +1,29 @@
+.rate {
+    font-size: var(--small-font);
+}
+.rate__title {
+    text-transform: uppercase;
+    margin-right: 4px;
+}
+.rate__reviews {
+    color: var(--grey);
+}
+.rate__rating {
+    line-height: 2;
+}
+.rate__rating > div {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+}
+.rate__rating > span {
+    display: inline-block;
+    margin-top: 1px;
+    vertical-align: top;
+}
+.rate__rating button{
+    padding: 2px;
+}
+.rate__rating button svg {
+    font-size: 15px;
+}
